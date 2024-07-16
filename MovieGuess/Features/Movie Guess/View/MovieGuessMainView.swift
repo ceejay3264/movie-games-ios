@@ -108,7 +108,7 @@ struct MovieGuessMainView: View {
                 viewModel.startGame()
             }
             .navigationTitle("Guess the Movie Poster!")
-            .sheet(isPresented: $showSheet) {
+            .fullScreenCover(isPresented: $showSheet) {
                 MovieGuessGameFinishedView(gameResult: $gameResult, posterURL: $viewModel.posterURL, guessesRemaining: $viewModel.guessesRemaining)
             }
             
