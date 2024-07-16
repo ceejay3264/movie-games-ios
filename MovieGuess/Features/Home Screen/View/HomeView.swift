@@ -9,13 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var presentGame = false
+    @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Movie Guess")
+                Text("Guess the Movie Poster!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Text("Guess the movie poster in six tries or less. Hints count as one guess each.")
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
                 
                 Button(action: {
                     presentGame = true
@@ -30,6 +36,9 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $presentGame) {
                 MovieGuessMainView()
+            }
+            .onAppear() {
+                viewModel.getGenres()
             }
         }
     }
