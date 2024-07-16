@@ -19,7 +19,7 @@ struct HomeView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
-                Text("Guess the movie poster in six tries or less. Hints count as one guess each.")
+                Text("Guess the movie poster in six tries or less.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
                 
