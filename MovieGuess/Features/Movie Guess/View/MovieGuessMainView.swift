@@ -21,7 +21,7 @@ struct MovieGuessMainView: View {
             List {
                 
                 // If there is a game result, show the play again button
-                if let result = gameResult {
+                if let _ = gameResult {
                     HStack {
                         Spacer()
                         playAgainButton
@@ -86,7 +86,7 @@ struct MovieGuessMainView: View {
                 ForEach(viewModel.searchResults) { item in
                     if let title = item.title {
                         Button {
-                            if let isGameWon = viewModel.isGameWon { return } // Game finished. Prevent more guesses
+                            if let _ = viewModel.isGameWon { return } // Game finished. Prevent more guesses
                             
                             if viewModel.selectGuess(title: title) {
                                 madeWrongGuess()
@@ -109,13 +109,7 @@ struct MovieGuessMainView: View {
             }
             .navigationTitle("Guess the Movie Poster!")
             .sheet(isPresented: $showSheet) {
-                if let result = gameResult {
-                    if result {
-                        MovieGuessWinView(posterURL: $viewModel.posterURL, guessesRemaining: $viewModel.guessesRemaining)
-                    } else {
-                        MovieGuessLoseView(posterURL: $viewModel.posterURL)
-                    }
-                }
+                MovieGuessGameFinishedView(gameResult: $gameResult, posterURL: $viewModel.posterURL, guessesRemaining: $viewModel.guessesRemaining)
             }
             
             if showWrongGuessAlert {
@@ -124,7 +118,6 @@ struct MovieGuessMainView: View {
                         .transition(.move(edge: .bottom))
                     Spacer()
                 }
-                
             }
         }
             

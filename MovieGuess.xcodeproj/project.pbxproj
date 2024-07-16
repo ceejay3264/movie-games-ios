@@ -26,6 +26,7 @@
 		0C37DEE22C3F099400C3A32D /* MovieGuessLoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DEE12C3F099400C3A32D /* MovieGuessLoseView.swift */; };
 		0C37DEE72C3F49CA00C3A32D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DEE62C3F49CA00C3A32D /* HomeViewModel.swift */; };
 		0C37DEE92C3F4AA700C3A32D /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DEE82C3F4AA700C3A32D /* Genres.swift */; };
+		0C37DEEB2C46C89F00C3A32D /* MovieGuessGameFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37DEEA2C46C89F00C3A32D /* MovieGuessGameFinishedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		0C37DEE12C3F099400C3A32D /* MovieGuessLoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGuessLoseView.swift; sourceTree = "<group>"; };
 		0C37DEE62C3F49CA00C3A32D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0C37DEE82C3F4AA700C3A32D /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		0C37DEEA2C46C89F00C3A32D /* MovieGuessGameFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGuessGameFinishedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				0C37DECA2C3E4D0000C3A32D /* MovieGuessMainView.swift */,
 				0C37DEDF2C3EFD2600C3A32D /* MovieGuessWinView.swift */,
 				0C37DEE12C3F099400C3A32D /* MovieGuessLoseView.swift */,
+				0C37DEEA2C46C89F00C3A32D /* MovieGuessGameFinishedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				0C37DEDA2C3E624D00C3A32D /* DateExtension.swift in Sources */,
 				0C37DEDE2C3EE7EC00C3A32D /* ConfigurationEnum.swift in Sources */,
 				0C37DEE92C3F4AA700C3A32D /* Genres.swift in Sources */,
+				0C37DEEB2C46C89F00C3A32D /* MovieGuessGameFinishedView.swift in Sources */,
 				0C37DECB2C3E4D0000C3A32D /* MovieGuessMainView.swift in Sources */,
 				0C37DEE22C3F099400C3A32D /* MovieGuessLoseView.swift in Sources */,
 				0C37DEC82C3E4C9500C3A32D /* ContentView.swift in Sources */,
